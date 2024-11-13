@@ -39,6 +39,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+	background-color: #fafaf9;
 }
 
 header {
@@ -63,13 +64,31 @@ header {
     /*border-radius: 100%; /* Make it circular */
 }
 
+.inline-photo img {
+	height: 100px; /* Adjust as needed */
+	width: 200px;
+}
+
+.image-container {
+	display: flex; /* Use flexbox to arrange items in a row */
+	justify-content: center; /* Center the images horizontally */
+ }
+.image-container img {
+	margin: 10px; /* Add some space between the images */
+	max-width: 200px; /* Ensure images are responsive */
+	height: 300px; /* Maintain aspect ratio */
+}
+
 .carousel {
     position: relative;
-    width: 80%; /* Fixed width for the carousel */
-    height: 200%; /* Fixed height for the carousel */
+    width: 80%;  Fixed width for the carousel */
+    /*height: 200%;  Fixed height for the carousel */
     margin: 0 20px; /* Add margin for spacing */
 	margin-top: 10px;
     overflow: hidden;
+	background: #fafaf9;
+	justify-content: center; /* Optional: to center content */
+    align-items: center;
 }
 
 .carousel-item {
@@ -81,6 +100,7 @@ header {
 	flex-direction: column;
 	align-items: flex-start;
 	min-height: 100%;
+	background-color: #fafaf9;
 }
 
 .carousel-item.active {
@@ -88,10 +108,11 @@ header {
 }
 
 .carousel-item h1 {
-    font-size: 24px; /* Adjust the font size */
+    font-size: 34px; /* Adjust the font size */
     margin-bottom: 15px; /* Space below the heading */
     color: #333; /* Heading color */
     text-align: center; /* Center the heading */
+	background-color: #fff;
 }
 
 .carousel-item ul {
@@ -134,7 +155,7 @@ button {
     justify-content: space-between; /* Center the content */
     margin: 10px; /* Add margin for spacing */
 	position: relative; /* Position relative for absolute children */
-    width: 100%; 
+    width: 100%;
 }
 
 .side-image {
@@ -158,4 +179,15 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.social-icons a {
+    color: white; /* Icon color */
+    margin: 0 15px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+    color: #f39c12; /* Change color on hover */
 }
