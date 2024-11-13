@@ -1,0 +1,161 @@
+#hero-text {
+  /*font-family: 'Inter', Arial;
+  font-size: 16px;
+  color: #000000;*/
+  text-align: center;
+	align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Center the content */
+    margin: 10px; /* Add margin for spacing */
+	position: relative; /* Position relative for absolute children */
+    width: 80%;
+}
+
+.highlight {
+  color: $white;
+  text-shadow: 
+2px 2px 1px #000000, 
+2px -1px 1px #000000, 
+-1px 1px 1px #000000, 
+-1px -1px 1px #000000, 
+}
+
+.highlight {
+  color: #000000;
+  text-shadow:none;
+}
+
+.highlight.c1 {
+  background-color: #D9EDF8;
+}
+.highlight.c2 {
+  background-color: #FFADAD;
+}
+.highlight.c3 {
+  background-color: #FFD6A5;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fafaf9;
+}
+
+.logo img {
+    height: 100px; /* Adjust as needed */
+}
+
+.vote img {
+    height: 100px; /* Adjust as needed */
+	width: 200px;
+}
+
+.profile-photo img {
+    height: 100px; /* Adjust as needed */
+    /*border-radius: 100%; /* Make it circular */
+}
+
+.carousel {
+    position: relative;
+    width: 80%; /* Fixed width for the carousel */
+    height: 200%; /* Fixed height for the carousel */
+    margin: 0 20px; /* Add margin for spacing */
+	margin-top: 10px;
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    padding: 20px;
+    text-align: center;
+	height: 100%;
+	justify-content: flex-start;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 100%;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item h1 {
+    font-size: 24px; /* Adjust the font size */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Heading color */
+    text-align: center; /* Center the heading */
+}
+
+.carousel-item ul {
+    list-style-type: disc; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center the list */
+    max-width: 80%; /* Limit the width of the list */
+}
+
+.carousel-item li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 18px; /* Adjust the font size */
+    line-height: 1.5; /* Improve line spacing */
+    color: #555; /* Text color */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#home {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Center the content */
+    margin: 10px; /* Add margin for spacing */
+	position: relative; /* Position relative for absolute children */
+    width: 100%; 
+}
+
+.side-image {
+    width: 150px; /* Allow images to take equal space */
+    height: 800px;
+	text-align: center;
+	overflow: hidden;
+}
+
+.side-image img {
+    width: 100%; /* Make sure images fill the container */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
