@@ -1,0 +1,258 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #e7862b;
+    color: white;
+    padding: 10px 20px;
+    display: flex;  /* This ensures items inside header are arranged side by side */
+    align-items: center;  /* Vertically align the items in the center */
+	padding: 10px 20px;
+	border-bottom: 2px solid #ddd;
+	width: 100%;
+	justify-content: space-between;
+}
+
+
+.loader_bg {
+	position: fixed;
+	z-index: 9999999;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.loader {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader img {
+	width: 280px;
+}
+
+
+.header-text {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.logo-left, .logo-right {
+  height: 100px; /* Adjust the logo size */
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 1.5rem;  /* Adjust the size as needed */
+    margin-left: 20px;  /* Space between the logo and the heading */
+    flex-grow: 1;  /* Ensures the heading text takes up remaining space */
+    text-align: right;  /* Align the text to the right */
+}
+
+/* Footer */
+footer {
+    background-color: #e7862b;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+
+.social-icons a {
+    color: white; /* Icon color */
+    margin: 0 15px; /* Space between icons */
+    font-size: 24px; /* Icon size */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-icons a:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+#hero-text {
+  /*font-family: 'Inter', Arial;
+  font-size: 16px;
+  color: #000000;*/
+  text-align: center;
+	align-items: center; /* Align items vertically in the center */
+    justify-content: space-between; /* Center the content */
+    margin: 10px; /* Add margin for spacing */
+	position: relative; /* Position relative for absolute children */
+    width: 80%;
+}
+
+.highlight {
+  color: $white;
+  text-shadow: 
+2px 2px 1px #000000, 
+2px -1px 1px #000000, 
+-1px 1px 1px #000000, 
+-1px -1px 1px #000000, 
+}
+
+.highlight {
+  color: #000000;
+  text-shadow:none;
+}
+
+.highlight.c1 {
+  background-color: #D9EDF8;
+}
+.highlight.c2 {
+  background-color: #FFADAD;
+}
+.highlight.c3 {
+  background-color: #FFD6A5;
+}
+
+
+.carousel-item ul {
+    list-style-type: disc; /* Remove default bullet points */
+    padding: 0; /* Remove padding */
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center the list */
+    max-width: 80%; /* Limit the width of the list */
+}
+
+.carousel-item li {
+    margin-bottom: 10px; /* Space between list items */
+    font-size: 18px; /* Adjust the font size */
+    line-height: 1.5; /* Improve line spacing */
+    color: #555; /* Text color */
+}
+
+.carousel-item h1 {
+    font-size: 20px; /* Adjust the font size */
+    margin-bottom: 15px; /* Space below the heading */
+    color: #333; /* Heading color */
+    text-align: center; /* Center the heading */
+	background-color: #fff;
+	font-weight: bold;
+}
+
+.carousel-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease;
+    padding: 0 20px; /* Padding for spacing on the sides */
+}
+
+/* Set a maximum height for images and ensure they scale properly */
+.carousel-content {
+    text-align: center;
+    width: 100%;
+    max-height: 80vh; /* Limit height to 80% of viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Ensure space between images and text */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+	margin-top: 15px;
+    width: 100%;
+}
+
+.image-container img {
+    height: 300px; /* Set a fixed height for images */
+    width: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area while preserving aspect ratio */
+    border-radius: 8px;
+}
+
+.slide-text {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 10px;
+    max-width: 90%; /* Prevent text from stretching across the entire screen */
+}
+
+/* Carousel Dots */
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Make sure carousel is responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header .logo img {
+        height: 40px;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-container img {
+        max-width: 90%;
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .slide-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-content {
+        padding: 10px;
+    }
+
+    .slide-text {
+        font-size: 1rem;
+    }
+
+    .image-container img {
+        width: 100%; /* Full width on smaller screens */
+        height: auto; /* Let images adjust to maintain aspect ratio */
+    }
+}
