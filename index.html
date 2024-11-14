@@ -17,8 +17,13 @@
 	<div class="loader_bg">
 	 <div class="loader"><img src="images/loading.gif" alt="#" /></div>
 	</div>
-    <div class="carousel-container">
-        <div class="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+		</ol>
+        <div class="carousel-inner">
             <div class="carousel-item">
 				<div class="carousel-content">
 					<h1>YOUR CANDIDATE</h1>
@@ -76,9 +81,9 @@
 							<li>Fighting Malaria and Dengue.</li>
 							<li>Prioritise women safety.</li>
 							<li>Stray Animal safety & Stray animal shelter homes.</li>
-							<li>To coordinate with municipal corporators to make better roads and fill the potholes in the constituency to avoid traffic jams, 
+							<li>To coordinate with municipal corporators to make better roads and fill the potholes in the constituency to avoid traffic jams,
 							road accidents, save your fuel and vehicle repair costs.</li>
-							<li>Make government schools better and, promote and encourage education for the weaker section of society 
+							<li>Make government schools better and, promote and encourage education for the weaker section of society
 							for equal opportunity as per the Constitution of India.</li>
 							<li>Identify a location and build a public hospital in the constituency, for making public health more accessible.</li>
 							<li>Identify a location and build a public dispensary to reach out to weaker section of the society for medical needs.</li>
@@ -103,12 +108,22 @@
 					</p>
                 </div>
             </div>
-			<div class="carousel-item">
+			<div class="carousel-item active">
 				<div class="carousel-content">
-                    <img src="images/banner.jpg" alt="banner"/>
+				<div class="image-container2">
+                    <img src="images/banner.jpg" alt="banner" class="d-block w-100"/>
+					</div>
                 </div>
             </div>
         </div>
+		<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		</a>
     </div>
     <footer>
 		<div class="social-icons">
