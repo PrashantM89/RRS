@@ -15,15 +15,11 @@ body {
 header {
     background-color: #e7862b;
     color: white;
-    padding: 10px 20px;
+    padding: 10px;
     display: flex;  /* This ensures items inside header are arranged side by side */
     align-items: center;  /* Vertically align the items in the center */
-	padding: 10px 20px;
-	border-bottom: 2px solid #ddd;
-	width: 100%;
 	justify-content: space-between;
 }
-
 
 .loader_bg {
 	position: fixed;
@@ -103,11 +99,11 @@ footer {
 
 .highlight {
   color: $white;
-  text-shadow: 
-2px 2px 1px #000000, 
-2px -1px 1px #000000, 
--1px 1px 1px #000000, 
--1px -1px 1px #000000, 
+  text-shadow:
+2px 2px 1px #000000,
+2px -1px 1px #000000,
+-1px 1px 1px #000000,
+-1px -1px 1px #000000,
 }
 
 .highlight {
@@ -125,9 +121,19 @@ footer {
   background-color: #FFD6A5;
 }
 
+ul {
+  list-style: none;
+}
+ul li::before {
+  content: "•";
+  color: #e7862b;
+  font-weight: bold;
+  display: inline-block;
+  width: 15px;
+
+}
 
 .carousel-item ul {
-    list-style-type: disc; /* Remove default bullet points */
     padding: 0; /* Remove padding */
     text-align: left; /* Align text to the left */
     margin: 0 auto; /* Center the list */
@@ -162,16 +168,25 @@ footer {
 .carousel {
     display: flex;
     transition: transform 0.5s ease;
-
+	margin-top: 1px;
+	margin-bottom: 0px;
+	height: auto;
 }
 
 .carousel-item {
+	overflow: hidden;
     min-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.5s ease;
     padding: 0 20px; /* Padding for spacing on the sides */
+	background: no-repeat center center scroll;
+}
+
+.carousel-inner{
+  width:100%;
+  max-height: 100%;
 }
 
 /* Set a maximum height for images and ensure they scale properly */
@@ -186,6 +201,9 @@ footer {
 	/*overflow-x: auto;
 	overflow-y: auto;*/
 }
+.carousel-item img {
+width: 100%;
+}
 
 .image-container {
     display: flex;
@@ -196,10 +214,17 @@ footer {
     width: 100%;
 }
 
+.image-container-banner {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
 .image-container img {
     height: 200px; /* Set a fixed height for images */
-    width: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area while preserving aspect ratio */
+    width: 200px; /* Maintain aspect ratio */
+    object-fit: contain; /* Cover the area while preserving aspect ratio */
     border-radius: 8px;
 }
 
@@ -232,42 +257,11 @@ footer {
     height: auto;
 }
 
-
-/* Make sure carousel is responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem;
+#warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #warning-message { display:block; }
     }
-
-    header .logo img {
-        height: 40px;
-    }
-
-    .image-container {
-        flex-direction: column;
-    }
-
-    .image-container img {
-        max-width: 90%;
-        height: auto; /* Adjust height for mobile */
-    }
-
-    .slide-text {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .carousel-content {
-        padding: 10px;
-    }
-
-    .slide-text {
-        font-size: 1rem;
-    }
-
-    .image-container img {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Let images adjust to maintain aspect ratio */
-    }
+@media only screen and (orientation:landscape){
+	#warning-message { display:none; }
 }
