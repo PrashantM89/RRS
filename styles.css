@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
 }
 
+
 header {
     background-color: #e7862b;
     color: white;
@@ -46,7 +47,7 @@ header {
 
 
 .header-text {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
   text-align: center;
   flex-grow: 1;
@@ -214,6 +215,10 @@ width: 100%;
     width: 100%;
 }
 
+.header-container {
+		display: flex;
+}
+
 .image-container-banner {
     display: flex;
     justify-content: center;
@@ -256,7 +261,7 @@ width: 100%;
    max-width: 80%;
     height: auto;
 }
-
+/*
 #warning-message { display: none; }
     @media only screen and (orientation:portrait){
         #wrapper { display:none; }
@@ -265,6 +270,7 @@ width: 100%;
 @media only screen and (orientation:landscape){
 	#warning-message { display:none; }
 }
+*/
 
 /* Make sure carousel is responsive */
 @media (max-width: 768px) {
@@ -275,6 +281,9 @@ width: 100%;
     .image-container {
         flex-direction: row;
     }
+	.header-container {
+		flex-direction: row;
+	}
 
     .image-container img {
         max-width: 30%;
@@ -284,6 +293,7 @@ width: 100%;
     .slide-text {
         font-size: 1rem;
     }
+
 }
 
 @media (max-width: 480px) {
@@ -293,7 +303,9 @@ width: 100%;
 	.image-container {
         flex-direction: row;
     }
-
+	.header-container {
+		flex-direction: row;
+	}
     .slide-text {
         font-size: 1rem;
     }
